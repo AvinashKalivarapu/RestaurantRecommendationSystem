@@ -51,11 +51,30 @@ y=testset[:,71]
 b=clf.predict(XX)
 true=0
 false=0
+tt = 0
+ff = 0
+tp = 0
+fn = 0
 for i,j in itertools.izip(b,y):
 	print i,":",j
+	if i==1.0:
+		tt = tt + 1
+	if i == 0.0:
+	        ff = ff + 1
 	if i==j:
 		true=true+1
+	        if i == 1.0:
+	        	tp = tp + 1
+	        else:
+	                fn = fn + 1
 	else:
 		false=false+1
-
+acc = (true * 100) /(true+false)
+#print "Accuracy:", acc,"%"
 print true," ",false
+print "Accuracy:", acc,"%"
+#print tt," ",ff
+#print tp," ",fn
+print "Confusion Matrix :"
+print tp," ",tt-tp
+print ff-fn," ",fn
