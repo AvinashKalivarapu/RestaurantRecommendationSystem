@@ -1,0 +1,74 @@
+Classifiers
+● Linear SVM ​
+: We trained and tested our dataset using Linear SVM classifier.
+Linear SVM is the newest extremely fast machine learning (data mining) algorithm
+for solving multi class classification problems from ultra large data sets that implements
+an original proprietary version of a cutting plane algorithm for designing a linear support
+vector machine. Linear SVM is a linearly scalable routine meaning that it creates an SVM
+model in a CPU time which scales linearly with the size of the training data set.
+● SVM with RBF kernel : ​
+We trained and tested our dataset using SVM with
+RBF kernel classifier.
+RBF network can be used find a set weights for a curve fitting problem. The
+weights are in higher dimensional space than the original data. I Learning is equivalent to
+finding a surface in high dimensional space that provides the best fit to training data. I
+Hidden layers provide a set of functions that constitute an arbitrary basis for input
+patterns when they are expanded to the hidden space; these functions are called radial
+basis functions.
+● Logistic Regression : ​
+We trained and tested our dataset using logistic
+regression.
+Logistic Regression is a special type of regression where binary response variable
+is related to a set of explanatory variables, which can be discrete and/or continuous. The
+important point here to note is that in linear regression, the expected values of the
+response variable are modeled based on combination of values taken by the predictors.
+In logistic regression Probability or Odds of the response taking a particular value is
+modeled based on combination of values taken by the predictors.
+6● Random Forest : ​
+We trained and tested our dataset using random forest.
+Random forests is a notion of the general technique of random decision
+[2] ​
+forests [1]
+​ ​
+that are an ensemble learning method for classification,regression and other
+tasks, that operate by constructing a multitude of ​
+decision trees ​
+at training time and
+outputting the class that is the ​
+mode ​
+of the classes (classification) or mean prediction
+(regression) of the individual trees. Random decision forests correct for decision trees'
+habit of overfitting to their training set.
+● We also built a new classifier method using ​
+Neural Networks ​
+for calculating the
+weights for the features .
+○ A net weight score is calculated for each of the available restaurants in the
+dataset.
+○ Net Weight score for every restaurant is calculated by taking all the
+features of that user and restaurant that are mentioned above
+○ Weights are given to each and every taken feature.
+○ A weight for every feature is found by backpropagation of the training data
+( data of last few months) by building a neural network.
+○ Given a user(U) and a restaurant(R), one should find out whether the user
+likes it or not.
+○ All the restaurants for which that particular user has given reviews are
+considered and an average net weight score is calculated.
+○ This calculated average net score is taken as a threshold(t).
+○ The net weight score(w) for this restaurant(R) will be known as the weight
+scores for all the restaurants are calculated in the beginning.
+○ If we find w to be greater than the taken threshold t , we return a ‘yes’
+7saying the user will like this restaurant.
+○ If we find w to be lesser than the taken threshold t , we return a ‘no’ saying
+the user will not like this restaurant.
+
+
+Dataset
+The data that we used in this project was obtained from the Yelp Dataset challenge. The
+dataset contains five different tables: User, Business, Review, Check-In and Tips. The data
+has 27257 restaurants, 552339 users, 55569 check-Ins, 591864 tips and 2225213 reviews.From this Yelp dataset, we took the latest 1 month data as test dataset. Apart from the
+test dataset, last 3 months data was taken as training dataset. Remaining part of the data
+apart from the test and training is used for calculating derived features(historical data).
+
+
+FURTHER DETAILS ARE SPECIFIED IN THE REPORT 
